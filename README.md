@@ -1,122 +1,134 @@
-# NETWORKWALKS-UZMA-B084-WK1-PM1-CYBERSECURITY-LAB-SETUP
+# 🔐 Cybersecurity Lab Setup
+### NetworkWalks Cybersecurity Program | Week 1 | Project PM1
 
-## Project Overview
+## 📌 Project Overview
 
-This repository documents my hands-on cybersecurity investigations using Wireshark as part of the NetworkWalks SOC Analyst training programme.
+This project documents the setup of a virtual cybersecurity laboratory using Oracle VirtualBox and Kali Linux.
 
-The project focuses on analysing network traffic, identifying suspicious behaviour, investigating security incidents, and understanding how attackers exploit network vulnerabilities.
+The aim was to create a controlled environment for practising network analysis, cybersecurity investigations, vulnerability assessment and ethical hacking techniques.
 
-These investigations were completed in a simulated training environment.
+The environment uses a private NAT Network, allowing virtual machines to communicate within the lab.
 
-## Tools and Skills
+## 🎯 Project Objectives
 
-- Wireshark
-- Network traffic analysis
-- TCP/IP protocol analysis
-- Packet filtering
-- SOC investigation techniques
-- Incident detection and analysis
-- HTTP, FTP, DNS, SIP and RTP analysis
+- Install and configure Oracle VirtualBox.
+- Set up Kali Linux as a virtual machine.
+- Create a dedicated NAT Network.
+- Configure the Kali Linux network adapter.
+- Verify IP addressing and connectivity.
+- Prepare the environment for future cybersecurity investigations.
+- Document the configuration and troubleshooting process.
 
-## Lab Investigations
+## 🛠️ Tools Used
 
-### Lab 3: Identifying a Port Scan
+| Tool | Purpose |
+|------|---------|
+| Oracle VirtualBox | Virtualisation platform |
+| Kali Linux | Cybersecurity testing environment |
+| Windows 11 | Host operating system |
+| NAT Network | Virtual machine connectivity |
+| Linux Terminal | Network configuration and testing |
 
-**Objective:** Identify an attacker scanning a server for open ports.
+## 🖥️ Lab Environment
 
-**Findings:**
-- Attacker IP: 192.168.10.66
-- Target IP: 192.168.10.20
-- Ports scanned: 40
-- Open ports: 22, 80, 443
-- Closed ports: 37
-- Attack identified: TCP port scan
+| Component | Configuration |
+|-----------|---------------|
+| Host operating system | Windows 11 |
+| Virtualisation platform | Oracle VirtualBox |
+| Security operating system | Kali Linux |
+| Virtual network | NAT Network |
+| Kali Linux IP | 10.0.0.4 |
+| Target VM IP | 10.0.0.5 |
+| Network range | 10.0.0.0/24 |
 
-**Skills gained:** TCP flag analysis, SYN packets, SYN-ACK responses and identifying reconnaissance activity.
+## 🪜 Lab Setup Procedure
 
-### Lab 4: Investigating Plaintext Chat Traffic
+### Step 1: Install Oracle VirtualBox
 
-**Objective:** Investigate an unencrypted office chat conversation.
+Installed Oracle VirtualBox to create and manage virtual machines on my computer.
 
-**Findings:**
-- Chat protocol: TCP
-- Server port: 5000
-- Client IP: 192.168.10.45
-- TCP stream: 5
-- Conversation size: 413 bytes
+VirtualBox provides an isolated environment for practising cybersecurity techniques without directly affecting the host operating system.
 
-**Security risk:** Sensitive information exchanged through plaintext communication can be intercepted and read.
+**Evidence:** Screenshot of VirtualBox installed and running.
 
-### Lab 5: Finding Hidden Information in HTTP Traffic
+### Step 2: Set Up Kali Linux
 
-**Objective:** Examine HTTP responses for information that is not visible in a browser.
+Imported and configured Kali Linux in VirtualBox.
 
-**Findings:**
-- A hidden note was discovered in `/staff.html`.
-- The information was stored inside an HTML comment.
-- HTTP response: 200 OK
+Kali Linux provides tools commonly used for cybersecurity investigations, network analysis and penetration testing.
 
-**Security risk:** HTML comments can accidentally expose sensitive internal information.
+**Evidence:** Screenshot of the Kali Linux virtual machine running.
 
-### Lab 6: Investigating Exposed Login Credentials
+### Step 3: Configure the NAT Network
 
-**Objective:** Analyse a login submitted through an unencrypted web application.
+Created a NAT Network in VirtualBox using the following network range:
 
-**Findings:**
-- Protocol: HTTP
-- Request method: POST
-- Login endpoint: `/login`
-- Form encoding: application/x-www-form-urlencoded
+`10.0.0.0/24`
 
-**Security risk:** HTTP can expose usernames and passwords in plaintext.
+The NAT Network allows virtual machines connected to the same network to communicate.
 
-**Recommendation:** Use HTTPS to encrypt web traffic.
+**Evidence:** Screenshot showing the NAT Network configuration.
 
-### Lab 7: Detecting an FTP Brute-Force Attack
+### Step 4: Configure Kali Linux Networking
 
-**Objective:** Investigate repeated failed FTP login attempts.
+Connected the Kali Linux virtual network adapter to the NAT Network.
 
-**Findings:**
-- Attacker IP: 192.168.10.66
-- Target FTP server: 192.168.10.20
-- Targeted username: admin
-- Failed login response: 530
-- Successful login response: 230
+Checked the network configuration to identify the IP address assigned to Kali Linux.
 
-**Security risk:** Repeated password attempts may allow attackers to gain unauthorised access.
+**Observed Kali IP address:** `10.0.0.4`
 
-**Recommendation:** Apply account lockout policies, rate limiting and secure authentication.
+**Evidence:** Screenshot showing the network adapter settings and Kali Linux IP address.
 
-### Lab 8: Investigating VoIP Traffic
+### Step 5: Configure the Target Virtual Machine
 
-**Objective:** Analyse a voice call captured in network traffic.
+Configured a target virtual machine for authorised cybersecurity testing.
 
-**Findings:**
-- SIP was used to establish the call.
-- RTP carried the voice traffic.
-- The caller's extension was 101.
-- The call audio could be reconstructed from the capture.
+The target machine was connected to the same NAT Network as Kali Linux.
 
-**Security risk:** Unencrypted voice traffic may be intercepted.
+**Observed target IP address:** `10.0.0.5`
 
-**Recommendation:** Protect voice communication using SRTP.
+**Evidence:** Screenshot showing the target VM configuration.
 
-## Key Takeaways
+### Step 6: Test Network Connectivity
 
-Through these investigations, I developed practical experience in:
+Verified network communication between Kali Linux and the target machine.
 
-1. Identifying suspicious network behaviour.
-2. Analysing packets and TCP flags.
-3. Following TCP streams to reconstruct communications.
-4. Investigating exposed credentials.
-5. Recognising brute-force attacks.
-6. Understanding the importance of encryption.
-7. Documenting security findings and recommending mitigations.
+The objective was to confirm that both virtual machines could communicate before beginning security investigations.
 
-## Disclaimer
+**Evidence:** Screenshot of the connectivity test.
 
-All investigations were conducted using simulated network traffic in an authorised cybersecurity training environment. IP addresses and findings belong to the training scenarios.
+## 🔧 Troubleshooting Experience
 
-## Training
+During the setup, I encountered difficulty understanding the difference between NAT and NAT Network configurations in VirtualBox.
 
-NetworkWalks - SOC Analyst Wireshark Labs
+I investigated the network adapter settings and checked how the virtual machines were connected.
+
+This helped me understand that virtual machines must be attached to the appropriate network for the intended communication to work.
+
+## 💡 What I Learned
+
+This project strengthened my understanding of:
+
+- Virtualisation and isolated testing environments.
+- Configuring virtual machines in VirtualBox.
+- The difference between NAT and NAT Network.
+- IPv4 addressing and private networks.
+- Verifying network connectivity.
+- Troubleshooting virtual machine network settings.
+- The importance of documenting technical configurations.
+
+## 🔒 Security and Ethical Considerations
+
+This environment was created for educational purposes and authorised cybersecurity practice only.
+
+All security investigations should be performed on systems that I own or have explicit permission to test.
+
+## 📚 Training Information
+
+**Programme:** NetworkWalks Cybersecurity Program
+
+**Batch:** B084
+
+**Week:** 1
+
+**Project:** PM1 – Cybersecurity Lab Setup
