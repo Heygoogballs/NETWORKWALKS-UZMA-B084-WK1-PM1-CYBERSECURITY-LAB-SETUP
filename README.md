@@ -99,9 +99,11 @@ The objective was to confirm that both virtual machines could communicate before
 
 ### Network Connectivity Evidence
 
+
 **Gateway connectivity test**
 
-![Gateway connectivity test](Gateway connectivity test.png)
+![Gateway connectivity test](<Gateway connectivity test.png>)
+
 **Internet connectivity test**
 
 ![Internet connectivity test](internet-ping.png)
