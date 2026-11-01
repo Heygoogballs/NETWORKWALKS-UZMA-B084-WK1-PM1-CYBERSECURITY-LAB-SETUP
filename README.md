@@ -51,6 +51,8 @@ VirtualBox provides an isolated environment for practising cybersecurity techniq
 
 **Evidence:** Screenshot of VirtualBox installed and running.
 
+![Oracle VirtualBox Manager](VM-running.png)
+
 ### Step 2: Set Up Kali Linux
 
 Imported and configured Kali Linux in VirtualBox.
@@ -58,6 +60,8 @@ Imported and configured Kali Linux in VirtualBox.
 Kali Linux provides tools commonly used for cybersecurity investigations, network analysis and penetration testing.
 
 **Evidence:** Screenshot of the Kali Linux virtual machine running.
+
+![Kali Linux running](Kali-running.png)
 
 ### Step 3: Configure the NAT Network
 
@@ -69,6 +73,8 @@ The NAT Network allows virtual machines connected to the same network to communi
 
 **Evidence:** Screenshot showing the NAT Network configuration.
 
+![Kali NAT Network settings](Kali-nat-network-settings.png)
+
 ### Step 4: Configure Kali Linux Networking
 
 Connected the Kali Linux virtual network adapter to the NAT Network.
@@ -79,6 +85,10 @@ Checked the network configuration to identify the IP address assigned to Kali Li
 
 **Evidence:** Screenshot showing the network adapter settings and Kali Linux IP address.
 
+![Kali network adapter settings](Kali-nat-network-settings.png)
+
+![Kali IP configuration](kali-network-config.png)
+
 ### Step 5: Configure the Target Virtual Machine
 
 Configured a target virtual machine for authorised cybersecurity testing.
@@ -88,6 +98,8 @@ The target machine was connected to the same NAT Network as Kali Linux.
 **Observed target IP address:** `10.0.0.5`
 
 **Evidence:** Screenshot showing the target VM configuration.
+
+![Metasploitable2 NAT Network settings](Meta-nat-network-settings.png)
 
 ### Step 6: Test Network Connectivity
 
