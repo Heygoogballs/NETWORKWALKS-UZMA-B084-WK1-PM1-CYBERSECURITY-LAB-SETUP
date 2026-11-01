@@ -37,7 +37,7 @@ The environment uses a private NAT Network, allowing virtual machines to communi
 | Virtualisation platform | Oracle VirtualBox |
 | Security operating system | Kali Linux |
 | Virtual network | NAT Network |
-| Kali Linux IP | 10.0.0.4 |
+| Kali Linux IP | 10.0.0.2 |
 | Target VM IP | 10.0.0.5 |
 | Network range | 10.0.0.0/24 |
 
@@ -75,7 +75,7 @@ Connected the Kali Linux virtual network adapter to the NAT Network.
 
 Checked the network configuration to identify the IP address assigned to Kali Linux.
 
-**Observed Kali IP address:** `10.0.0.4`
+**Observed Kali IP address:** `10.0.0.2`
 
 **Evidence:** Screenshot showing the network adapter settings and Kali Linux IP address.
 
