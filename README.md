@@ -112,6 +112,26 @@ The objective was to confirm that both virtual machines could communicate before
 
 ![DNS resolution test](dns-test.png)
 
+### Kali Linux to Metasploitable2 Connectivity Test
+
+To verify communication between the two virtual machines,
+I performed an ICMP connectivity test from Kali Linux
+to Metasploitable2.
+
+Command executed:
+
+`ping -c 4 10.0.0.5`
+
+**Results:**
+- Packets transmitted: 4
+- Packets received: 4
+- Packet loss: 0%
+
+The successful test confirms that Kali Linux can communicate
+with Metasploitable2 through the configured NAT Network.
+
+![Kali to Metasploitable2 connectivity](kali-to-metasploitable-ping.png)
+
 ## 🔧 Troubleshooting Experience
 
 During the setup, I encountered difficulty understanding the difference between NAT and NAT Network configurations in VirtualBox.
