@@ -97,6 +97,20 @@ The objective was to confirm that both virtual machines could communicate before
 
 **Evidence:** Screenshot of the connectivity test.
 
+### Network Connectivity Evidence
+
+**Gateway connectivity test**
+
+![Gateway connectivity test](gateway-ping.png)
+
+**Internet connectivity test**
+
+![Internet connectivity test](internet-ping.png)
+
+**DNS resolution test**
+
+![DNS resolution test](dns-test.png)
+
 ## 🔧 Troubleshooting Experience
 
 During the setup, I encountered difficulty understanding the difference between NAT and NAT Network configurations in VirtualBox.
