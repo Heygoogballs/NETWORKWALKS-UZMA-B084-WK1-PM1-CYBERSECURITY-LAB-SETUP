@@ -101,8 +101,7 @@ The objective was to confirm that both virtual machines could communicate before
 
 **Gateway connectivity test**
 
-![Gateway connectivity test](gateway-ping.png)
-
+![Gateway connectivity test](Gateway connectivity test.png)
 **Internet connectivity test**
 
 ![Internet connectivity test](internet-ping.png)
