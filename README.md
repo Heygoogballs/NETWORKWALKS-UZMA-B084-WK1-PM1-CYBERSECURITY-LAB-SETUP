@@ -1,4 +1,4 @@
-# Cybersecurity SOC Investigations | Wireshark Labs
+# NETWORKWALKS-UZMA-B084-WK1-PM1-CYBERSECURITY-LAB-SETUP
 
 ## Project Overview
 
